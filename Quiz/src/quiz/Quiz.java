@@ -20,19 +20,23 @@ public class Quiz {
         
         
         double totalPagar= 0;
-        
+         /* Aqui se utiliza el for para pedir el salario de la cantidad de empleados */ 
         for (int i = 0; i < cantidadEmpleados; i++) {
            double salario= Double.parseDouble(JOptionPane.showInputDialog(null,"Digite su salario "+(i+ 1)+":"));
            
-        double sem= salario* 0.0925;
-       double ivm= salario* 0.0508; 
+           
+         /* Aqui se hacen los calculos*/ 
+        double sem= salario* 0.0925; /* se calcula el SEM*/
+       double ivm= salario* 0.0508;  /* sE calcula el IVM*/
+      
        
        
-       totalPagar += sem + ivm; 
-       
+       totalPagar += sem + ivm; /* Se hace la suma del SEM y dek IVM */
+      
       
             
         }
+        /* Aqui se muestran el total a pagar */ 
        JOptionPane.showMessageDialog(null,"El total a pagar es de:"+ totalPagar+"₡");
         
        
